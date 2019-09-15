@@ -1,6 +1,9 @@
-const ADD_COMMENT = 'ADD_COMMENT';
+import uuid from "uuid";
 
-function addComment(text) {
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT'
+
+export function addComment(text) {
   return {
     type: ADD_COMMENT,
     id: uuid.v4(),
@@ -8,19 +11,9 @@ function addComment(text) {
   }
 }
 
-export ADD_COMMENT;
-export addComment;
-
-// typ akcji:
-const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT'
-
-// kreator akcji:
-function thumbUpComment(commentId) {
+export function thumbUpComment(commentId) {
   return {
     type: THUMB_UP_COMMENT,
     id: commentId
   }
 }
-
-export THUMB_UP_COMMENT;
-export thumbUpComment;

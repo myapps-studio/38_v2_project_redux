@@ -1,6 +1,5 @@
-import {
-    ADD_COMMENT
-} from './actions.js';
+import {ADD_COMMENT} from './actions.js';
+import {THUMB_UP_COMMENT} from './actions.js';
 
 // uaktualniony reducer comments.js:
 function comments(state = [], action) {
@@ -23,3 +22,5 @@ function comments(state = [], action) {
             return state;
     }
 }
+
+export default comments;
